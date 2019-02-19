@@ -39,6 +39,10 @@ func (gw *GlobalsWrapper) LogErrorWithTrace(err string, trace string) {
   gw.Globals.LogErrorWithTrace(err, trace)
 }
 
+func (gw *GlobalsWrapper) Clients() map[string]interface{} {
+  return gw.Globals.Clients()
+}
+
 func (gw *GlobalsWrapper) DB(key string) *sql.DB {
   client, found := gw.Globals.Clients()[key].(*sql.DB)
 

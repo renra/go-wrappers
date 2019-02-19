@@ -20,8 +20,6 @@ func (c *Config) GetString(msg string) string {
 }
 
 func main() {
-  fmt.Println("Hello World")
-
   config := &Config{}
   db, _ := sql.Open("postgres", "whatever")
 
@@ -34,6 +32,7 @@ func main() {
 
   globalsWrapper := wrappers.GlobalsWrapper{Globals: globals}
   globalsWrapper.Log(fmt.Sprintln("And I have a db client: %v", globalsWrapper.DB("postgres")))
+  globalsWrapper.Log(fmt.Sprintln("And I could have many more clients too:: %v", globalsWrapper.Clients()))
 
   handler := jsonHttpHandler.New(
     &globalsWrapper,
