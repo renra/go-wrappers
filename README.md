@@ -26,14 +26,16 @@ func (c *Config) GetString(msg string) string {
 }
 
 func main() {
-  fmt.Println("Hello World")
-
   config := &Config{}
 
   globals := pseudoglobals.New(config, &wrappers.LoggerWrapper{})
 
   globals.Log("I have a logger")
   globals.Log(fmt.Sprintln("And I have a config too: %s", globals.Config().GetString("whatever")))
+
+  globalsWrapper := wrappers.GlobalsWrapper{Globals: globals}
+  globalsWrapper.Log(fmt.Sprintln("And I have a db client: %v", globalsWrapper.DB("postgres")))
+  globalsWrapper.Log(fmt.Sprintln("And I could have many more clients too:: %v", globalsWrapper.Clients()))
 
   handler := jsonHttpHandler.New(
     &wrappers.GlobalsWrapper{Globals: globals},
