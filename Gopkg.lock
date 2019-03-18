@@ -2,16 +2,16 @@
 
 
 [[projects]]
-  name = "github.com/go-errors/errors"
-  packages = ["."]
-  revision = "a6af135bd4e28680facf08a3d206b454abc877a4"
-  version = "v1.0.1"
+  name = "github.com/renra/go-errtrace"
+  packages = ["errtrace"]
+  revision = "2e300f4351eebb9e8068ef7dab8361cac541affd"
+  version = "v1.1.0"
 
 [[projects]]
   name = "github.com/renra/go-json-http-handler"
   packages = ["jsonHttpHandler"]
-  revision = "8e2c6349ea2841544af697a41dcafd589f93b021"
-  version = "v1.0.0"
+  revision = "5fb77e4f26bc5e237938838507258c38371edc62"
+  version = "v3.0.0"
 
 [[projects]]
   name = "github.com/renra/go-logger"
@@ -22,12 +22,12 @@
 [[projects]]
   name = "github.com/renra/go-pseudoglobals"
   packages = ["pseudoglobals"]
-  revision = "2a0f9a66f5808cdd634aa8ea142409d43ad5d2d2"
-  version = "v1.1.0"
+  revision = "774d9e8d57de06adc9e79af72188c16ca18c654b"
+  version = "v2.0.0"
 
 [solve-meta]
   analyzer-name = "dep"
   analyzer-version = 1
-  inputs-digest = "a822e22d61541ebd423e9e6452894c29dbac5b83ed4c194b28f39b23707ae626"
+  inputs-digest = "641752d33c2ac0029e282322983bcc6f739f5cbff8566df4fef507b663148d5a"
   solver-name = "gps-cdcl"
   solver-version = 1

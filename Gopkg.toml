@@ -29,12 +29,16 @@
   version = "1.0.0"
 
 [[constraint]]
-  name = "github.com/renra/go-pseudoglobals"
+  name = "github.com/renra/go-errtrace"
   version = "1.1.0"
 
 [[constraint]]
+  name = "github.com/renra/go-pseudoglobals"
+  version = "2.0.0"
+
+[[constraint]]
   name = "github.com/renra/go-json-http-handler"
-  version = "1.0.0"
+  version = "3.0.0"
 
 [prune]
   go-tests = true
