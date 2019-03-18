@@ -64,7 +64,7 @@ func main() {
   globals.Log(fmt.Sprintln("And I have a config too: %s", globals.Config().GetStringP("whatever")))
 
   globalsWrapper := wrappers.GlobalsWrapper{Globals: globals}
-  globalsWrapper.Log(fmt.Sprintln("And I could have many more clients too:: %v", globalsWrapper.Clients()))
+  globalsWrapper.Log(fmt.Sprintln("And I could have many clients too:: %v", globalsWrapper.Clients()))
 
   handler := jsonHttpHandler.New(
     &globalsWrapper,
