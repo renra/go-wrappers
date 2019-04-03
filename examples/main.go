@@ -56,7 +56,7 @@ func main() {
   config := &Config{}
   db, _ := sql.Open("postgres", "whatever")
 
-  globals := pseudoglobals.New(config, &wrappers.LoggerWrapper{}, map[string]interface{}{
+  globals := pseudoglobals.New(config, &wrappers.LoggerWrapper{}, "log_label", map[string]interface{}{
     "postgres": db,
   })
 
