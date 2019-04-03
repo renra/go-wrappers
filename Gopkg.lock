@@ -22,12 +22,12 @@
 [[projects]]
   name = "github.com/renra/go-pseudoglobals"
   packages = ["pseudoglobals"]
-  revision = "774d9e8d57de06adc9e79af72188c16ca18c654b"
-  version = "v2.0.0"
+  revision = "543fe83e581a80da4cb65b55560221e521d7f95d"
+  version = "v3.0.0"
 
 [solve-meta]
   analyzer-name = "dep"
   analyzer-version = 1
-  inputs-digest = "641752d33c2ac0029e282322983bcc6f739f5cbff8566df4fef507b663148d5a"
+  inputs-digest = "f11d10faf04126c1c316710c3da235dbc178e0e4eaacb2d51c99ffd83f69a882"
   solver-name = "gps-cdcl"
   solver-version = 1
