@@ -2,6 +2,7 @@ package main
 
 import (
   "fmt"
+  "net/http"
   "app/wrappers"
   "github.com/renra/go-errtrace/errtrace"
   "github.com/renra/go-pseudoglobals/pseudoglobals"
@@ -68,7 +69,18 @@ func main() {
 
   handler := jsonHttpHandler.New(
     &globalsWrapper,
-    map[string]jsonHttpHandler.GlobalsReceivingHandlerFunc{},
+    []jsonHttpHandler.RouteData{
+      jsonHttpHandler.NewRouteData(
+        http.MethodGet,
+        "status",
+        func (g jsonHttpHandler.Globals) http.HandlerFunc {
+          return func (w http.ResponseWriter, r *http.Request) {
+            fmt.Fprintf(w, "{}")
+          }
+        },
+        []jsonHttpHandler.Middleware{},
+      ),
+    },
   )
 
   globals.Log(fmt.Sprintln("And I have a handler for JSON APIs: %v", handler))
