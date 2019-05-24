@@ -38,7 +38,7 @@
 
 [[constraint]]
   name = "github.com/renra/go-json-http-handler"
-  version = "4.0.0"
+  version = "5.0.0"
 
 [prune]
   go-tests = true

@@ -10,8 +10,8 @@
 [[projects]]
   name = "github.com/renra/go-json-http-handler"
   packages = ["jsonHttpHandler"]
-  revision = "1fe8f8dfd77f007e62e7a3bd95a8841e9dadcf77"
-  version = "v4.0.0"
+  revision = "efb38b463cb5a0bc7cd0ceea10b5dc9d38a45444"
+  version = "v5.0.0"
 
 [[projects]]
   name = "github.com/renra/go-logger"
@@ -28,6 +28,6 @@
 [solve-meta]
   analyzer-name = "dep"
   analyzer-version = 1
-  inputs-digest = "fbcd6d4092fffd2a75eb768ed9ed3213598e71f67ae46c7d93bc87ff3600a6e9"
+  inputs-digest = "3ca0730d42b0609f63faad974e4f94a3f73ea3346c6476d06a09973023893188"
   solver-name = "gps-cdcl"
   solver-version = 1
